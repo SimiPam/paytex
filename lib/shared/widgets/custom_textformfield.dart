@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utils/color.dart';
+import '../utils/themes/theme.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final Widget? prefixIcon;
@@ -80,7 +81,7 @@ class CustomTextFormField extends StatelessWidget {
           TextFormField(
             // textAlign: useUnderline == true ? TextAlign.center : TextAlign.left,
             style: TextStyle(
-                color: textGrayScaleBlueColor,
+                color: pmTheme.text!,
                 letterSpacing: useUnderline == true ? 0.0 : 0.0,
                 fontSize: useUnderline == true ? 14.sp : 14.sp,
                 fontWeight: FontWeight.w400),
@@ -114,7 +115,7 @@ class CustomTextFormField extends StatelessWidget {
               // ),
               labelStyle: TextStyle(
                 fontSize: 14.sp,
-                color: grayscaleLabel,
+                color: pmTheme.text!,
               ),
               // helperStyle: TextStyle(
               //   fontSize: 16.sp,
@@ -122,7 +123,7 @@ class CustomTextFormField extends StatelessWidget {
               // ),
 
               errorStyle: TextStyle(
-                color: textErrorRedColor,
+                color: pmTheme.red!,
                 fontSize: 12.sp,
                 height: 0.10,
               ),
@@ -147,7 +148,7 @@ class CustomTextFormField extends StatelessWidget {
               suffixIcon: suffixIcon,
               hintText: hintText,
               hintStyle: TextStyle(
-                  color: textGrayScalePurpleColor,
+                  color: pmTheme.text!,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400),
               focusedBorder: useUnderline == true

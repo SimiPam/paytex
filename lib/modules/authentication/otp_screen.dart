@@ -8,6 +8,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../core/service-injector/service_injector.dart';
 import '../../router/route_paths.dart';
 import '../../shared/utils/color.dart';
+import '../../shared/utils/themes/theme.dart';
 import '../../shared/utils/utils.dart';
 import '../../shared/widgets/base_view.dart';
 import '../../shared/widgets/space.dart';
@@ -44,7 +45,7 @@ class Otp extends StatelessWidget {
                         child: FaIcon(
                           FontAwesomeIcons.arrowLeftLong,
                           size: 28.sp,
-                          color: textGrayScaleBlueColor,
+                          color: pmTheme.text,
                           // size: .sp,
                         ),
                       )
@@ -55,12 +56,12 @@ class Otp extends StatelessWidget {
                         child: Icon(
                           Icons.arrow_back_ios,
                           size: 28.sp,
-                          color: textGrayScaleBlueColor,
+                          color: pmTheme.text,
                         ),
                       ),
                 HSpace(20.h),
                 Styles.medium("Enter verification code",
-                    fontSize: 20.sp, color: textGrayScaleBlueColor),
+                    fontSize: 20.sp, color: pmTheme.text),
                 HSpace(8.h),
                 RichText(
                   textAlign: TextAlign.center,
@@ -69,14 +70,14 @@ class Otp extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FWt.regular,
-                      color: textGrayScaleBlueColor,
+                      color: pmTheme.text,
                     ),
                     children: <TextSpan>[
                       TextSpan(
                         text: "${si.email}\n",
                         style: TextStyle(
                           fontSize: 14.sp,
-                          color: textGrayScaleBlueColor,
+                          color: pmTheme.text,
                           fontWeight: FWt.regular,
                         ),
                       )
@@ -104,7 +105,7 @@ class Otp extends StatelessWidget {
                       inactiveColor: underlineGrayColor,
                       selectedFillColor: primaryWhiteColor,
                       selectedColor: primaryColor,
-                      errorBorderColor: textErrorRedColor,
+                      errorBorderColor: pmTheme.red,
                       disabledColor: underlineGrayColor,
                       activeFillColor: primaryWhiteColor,
                       borderRadius: BorderRadius.circular(5.r)),
@@ -133,7 +134,7 @@ class Otp extends StatelessWidget {
                 HSpace(40.h),
                 Center(
                   child: Styles.semiBold('Resend code',
-                      fontSize: 14.sp, color: textGrayScaleBlueColor),
+                      fontSize: 14.sp, color: pmTheme.text),
                 )
               ],
             ),

@@ -5,7 +5,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import '../../shared/models/authentication/auth_payload.dart';
+import '../../shared/models/authentication/auth_model.dart';
 import '../service-injector/service_injector.dart';
 import 'storage_service.dart';
 import 'store_service.dart';

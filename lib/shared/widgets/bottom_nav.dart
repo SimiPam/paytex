@@ -5,6 +5,7 @@ import 'dart:convert';
 // import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:paytex/shared/utils/themes/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -76,19 +77,19 @@ class _BottomNav extends State<BottomNav> with WidgetsBindingObserver {
           context: context,
           builder: (context) => AlertDialog(
             title: Styles.regular('Exit App',
-                fontSize: 14.sp, color: textGrayScaleBlueColor),
+                fontSize: 14.sp, color: pmTheme.text),
             content: Styles.regular('Do you want to exit an App?',
-                fontSize: 14.sp, color: textGrayScaleBlueColor),
+                fontSize: 14.sp, color: pmTheme.text),
             actions: [
               ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(false),
-                child: Styles.regular('No',
-                    fontSize: 14.sp, color: textGrayScaleBlueColor),
+                child:
+                    Styles.regular('No', fontSize: 14.sp, color: pmTheme.text),
               ),
               ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(true),
-                child: Styles.regular('Yes',
-                    fontSize: 14.sp, color: textGrayScaleBlueColor),
+                child:
+                    Styles.regular('Yes', fontSize: 14.sp, color: pmTheme.text),
               ),
             ],
           ),
@@ -112,7 +113,7 @@ class _BottomNav extends State<BottomNav> with WidgetsBindingObserver {
                   fontSize: 10.sp,
                   fontWeight: FontWeight.w400),
               unselectedLabelStyle: TextStyle(
-                  color: textGrayScaleBlueColor,
+                  color: pmTheme.text,
                   fontSize: 10.sp,
                   fontWeight: FontWeight.w400),
               backgroundColor: primaryWhiteColor,

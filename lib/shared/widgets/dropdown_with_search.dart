@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../shared/utils/color.dart';
 import '../../../shared/widgets/space.dart';
 import '../../core/services/utility_service.dart';
+import '../utils/themes/theme.dart';
 import '../utils/utils.dart';
 
 class DropdownWithSearch<T> extends StatelessWidget {
@@ -102,7 +103,7 @@ class DropdownWithSearch<T> extends StatelessWidget {
                       : TextStyle(
                           fontFamily: 'Be Vietnam Pr',
                           fontSize: 14.sp,
-                          color: textGrayScalePurpleColor,
+                          color: pmTheme.purple,
                         ),
                 ),
               ),
@@ -199,11 +200,10 @@ class _SearchDialogState<T> extends State<SearchDialog> {
                       },
                       child: Icon(
                         Icons.arrow_back_ios,
-                        color: textGrayScaleBlueColor,
+                        color: pmTheme.blueBlack,
                       )),
                   hintText: widget.placeHolder,
-                  helperStyle:
-                      TextStyle(fontSize: 14, color: textGrayScalePurpleColor),
+                  helperStyle: TextStyle(fontSize: 14, color: pmTheme.purple),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                         widget.searchInputRadius != null
@@ -223,7 +223,7 @@ class _SearchDialogState<T> extends State<SearchDialog> {
                 ),
                 style: widget.itemStyle != null
                     ? widget.itemStyle
-                    : TextStyle(fontSize: 14.sp, color: textGrayScaleBlueColor),
+                    : TextStyle(fontSize: 14.sp, color: pmTheme.text!),
                 controller: textController,
               ),
             ),

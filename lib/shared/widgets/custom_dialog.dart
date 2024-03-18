@@ -5,6 +5,7 @@ import 'package:lottie/lottie.dart';
 import '../../../shared/widgets/space.dart';
 import '../utils/color.dart';
 import '../utils/styles.dart';
+import '../utils/themes/theme.dart';
 import 'custom_button.dart';
 
 void showCustomDialog(
@@ -35,7 +36,7 @@ void showCustomDialog(
                 ),
               ),
               HSpace(12.h),
-              Styles.medium(message, color: textGrayScaleBlueColor),
+              Styles.medium(message, color: pmTheme.text!),
               HSpace(16.h),
               CustomButton(
                   margin: 0.w,

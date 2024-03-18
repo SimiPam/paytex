@@ -5,6 +5,7 @@ import '../../modules/authentication/viewmodel/authentication_vm.dart';
 import '../../router/route_paths.dart';
 import '../../shared/utils/assets.dart';
 import '../../shared/utils/color.dart';
+import '../../shared/utils/themes/theme.dart';
 import '../../shared/utils/utils.dart';
 import '../../shared/utils/validator.dart';
 import '../../shared/widgets/base_view.dart';
@@ -34,11 +35,10 @@ class SignInScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Styles.medium('Welcome back',
-                color: textGrayScaleBlueColor, fontSize: 20.sp),
+            Styles.medium('Welcome back', color: pmTheme.text, fontSize: 20.sp),
             HSpace(8.h),
             Styles.regular('Enter your employee ID to login.',
-                color: textGrayScaleBlueColor, fontSize: 14.sp),
+                color: pmTheme.text, fontSize: 14.sp),
             HSpace(22.h),
             _signInForm(viewModel),
             HSpace(30.h),
@@ -58,7 +58,7 @@ class SignInScreen extends StatelessWidget {
                   Navigator.pushNamed(context, RoutePaths.forgotPassword);
                 },
                 child: Styles.semiBold('I forgot my password',
-                    color: textGrayScaleBlueColor, fontSize: 14.sp),
+                    color: pmTheme.text, fontSize: 14.sp),
               ),
             ),
             Spacer(),
@@ -68,7 +68,7 @@ class SignInScreen extends StatelessWidget {
                   Navigator.pushNamed(context, RoutePaths.signUp);
                 },
                 child: Styles.semiBold('Don’t have an account? Sign up',
-                    color: textGrayScaleBlueColor, fontSize: 14.sp),
+                    color: pmTheme.text!, fontSize: 14.sp),
               ),
             ),
           ],
@@ -86,7 +86,7 @@ class SignInScreen extends StatelessWidget {
             CustomTextFormField(
               controller: viewModel.signInEmailController,
               validator: FieldValidator.validate,
-              fillingColor: textFieldFill,
+              fillingColor: pmTheme.text,
               filled: viewModel.showClear,
               autofocus: false,
               useUnderline: viewModel.showClear,
@@ -109,17 +109,17 @@ class SignInScreen extends StatelessWidget {
                     : Icon(
                         size: 24.sp,
                         Icons.clear,
-                        color: grayscaleLabel,
+                        color: pmTheme.text,
                       ),
               ),
               labelText: "Employee ID",
-              labelColor: textGrayScalePurpleColor,
+              labelColor: pmTheme.text,
               autovalidateMode: AutovalidateMode.onUserInteraction,
             ),
             HSpace(20.h),
             CustomTextFormField(
               labelText: "Password",
-              fillingColor: textFieldFill,
+              fillingColor: pmTheme.text,
               filled: viewModel.showClearPassword,
               useUnderline: viewModel.showClearPassword,
               autofocus: false,
@@ -133,7 +133,7 @@ class SignInScreen extends StatelessWidget {
                 }
                 viewModel.notifyListeners();
               },
-              labelColor: textGrayScalePurpleColor,
+              labelColor: pmTheme.text,
               controller: viewModel.signInpasswordController,
               obscureText: !viewModel.passVisible,
               validator: PasswordValidator.validateLoginPassword,
@@ -149,12 +149,12 @@ class SignInScreen extends StatelessWidget {
                               width: 24.w,
                               height: 24.h,
                               ImageAssets.view,
-                              color: grayscaleLabel),
+                              color: pmTheme.text),
                         )
                       : Padding(
                           padding: EdgeInsets.only(right: 12.sp),
                           child: Image.asset(ImageAssets.hide,
-                              width: 24.w, height: 24.h, color: grayscaleLabel),
+                              width: 24.w, height: 24.h, color: pmTheme.text),
                         )),
             ),
           ],

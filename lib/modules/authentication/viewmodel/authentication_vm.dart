@@ -7,7 +7,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../../core/base/base_viewmodel.dart';
 import '../../../core/service-injector/service_injector.dart';
-import '../../../shared/models/authentication/sign_in_data.dart';
+import '../../../shared/models/layout_model.dart';
 
 class AuthViewModel extends BaseViewModel {
   final BuildContext? context;

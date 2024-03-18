@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../shared/utils/color.dart';
 import '../../../shared/utils/styles.dart';
+import '../../../shared/utils/themes/theme.dart';
 import '../../../shared/widgets/space.dart';
 
 PreferredSize buildPreferredSize({String? label, context}) {
@@ -38,9 +39,7 @@ PreferredSize buildPreferredSize({String? label, context}) {
                 ),
           WSpace(8.w),
           Styles.semiBold(label ?? "",
-              fontSize: 20.sp,
-              color: textGrayScaleBlueColor,
-              align: TextAlign.left)
+              fontSize: 20.sp, color: pmTheme.text, align: TextAlign.left)
         ],
       ),
     ),

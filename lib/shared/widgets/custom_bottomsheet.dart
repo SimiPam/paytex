@@ -6,6 +6,7 @@ import '../../../shared/widgets/space.dart';
 import '../utils/assets.dart';
 import '../utils/color.dart';
 import '../utils/styles.dart';
+import '../utils/themes/theme.dart';
 import 'custom_button.dart';
 
 showCustomModal(
@@ -46,7 +47,7 @@ showCustomModal(
             HSpace(24.h),
             Center(
               child: Styles.semiBold(headerText ?? 'Success!',
-                  color: !isSuccess ? orangeColor : primaryColor,
+                  color: !isSuccess ? pmTheme.orange : primaryColor,
                   fontSize: 24.sp,
                   align: TextAlign.center),
             ),
@@ -56,7 +57,7 @@ showCustomModal(
                   fontSize: 16.sp,
                   fontWeight: FWt.regular,
                   align: TextAlign.center,
-                  color: textGrayScaleBlueColor),
+                  color: pmTheme.black),
             ),
             HSpace(50.h),
             HSpace(20.h),

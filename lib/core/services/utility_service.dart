@@ -5,6 +5,7 @@ import 'package:paytex/shared/utils/dims.dart';
 import 'package:paytex/shared/utils/styles.dart';
 
 import '../../shared/utils/color.dart';
+import '../../shared/utils/themes/theme.dart';
 
 class UtilitiesService {
   bool isValidEmail(String email) {
@@ -235,11 +236,11 @@ class UtilitiesService {
       builder: (context, child) {
         return Theme(
           data: ThemeData.light().copyWith(
-            colorScheme: const ColorScheme.dark(
+            colorScheme: ColorScheme.dark(
               primary: primaryColor,
               onPrimary: Colors.white,
               surface: Colors.white12,
-              onSurface: textGrayScaleBlueColor,
+              onSurface: pmTheme.text!,
             ),
             // dialogBackgroundColor:Colors.blue[900],
           ),

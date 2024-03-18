@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utils/color.dart';
+import '../utils/themes/theme.dart';
 import '../utils/utils.dart';
 
 snackBar({
@@ -28,7 +29,7 @@ snackBar({
             width: deviceWidth(context) * 0.9,
             height: height,
             decoration: BoxDecoration(
-                color: isError == true ? textErrorRedColor : primaryColor,
+                color: isError == true ? pmTheme.red! : primaryColor,
                 borderRadius: BorderRadius.circular(4.r)),
             child: Column(
               mainAxisSize: MainAxisSize.min,

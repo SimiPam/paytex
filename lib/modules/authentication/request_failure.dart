@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../modules/authentication/widgets/constants.dart';
 import '../../shared/utils/color.dart';
+import '../../shared/utils/themes/theme.dart';
 import '../../shared/utils/utils.dart';
 import '../../shared/widgets/custom_snackbar.dart';
 import '../../shared/widgets/space.dart';
@@ -59,16 +60,16 @@ class AuthenticationFailure extends StatelessWidget {
                         Styles.regular("Authentication Failure 🥲",
                             fontSize: 20.sp,
                             fontWeight: FontWeight.w700,
-                            color: textErrorRedColor,
+                            color: pmTheme.red,
                             height: 1.4),
                         HSpace(8.h),
                         Styles.regular(authMessage ?? "We will be back shortly",
-                            fontSize: 14.sp, color: textGrayScaleBlueColor),
+                            fontSize: 14.sp, color: pmTheme.text),
                         HSpace(53.h),
                         Styles.regular("Contact Cdal",
                             fontWeight: FontWeight.w600,
                             fontSize: 14.sp,
-                            color: textGrayScaleBlueColor),
+                            color: pmTheme.text),
                         HSpace(36.h),
                         Container(
                           height: 46.h,
@@ -76,7 +77,7 @@ class AuthenticationFailure extends StatelessWidget {
                               horizontal: 8.w, vertical: 12.h),
                           decoration: BoxDecoration(
                             color: primaryWhiteColor,
-                            border: Border.all(color: textGrayScalePurpleColor),
+                            border: Border.all(color: pmTheme.text!),
                             borderRadius: BorderRadius.circular(4.r),
                           ),
                           child: Row(
@@ -86,7 +87,7 @@ class AuthenticationFailure extends StatelessWidget {
                                   child: Styles.regular("support@cdal.com",
                                       fontWeight: FontWeight.w600,
                                       fontSize: 14.sp,
-                                      color: textBodyPurpleColor)),
+                                      color: pmTheme.text)),
                               Expanded(
                                   child: InkWell(
                                 onTap: () {
@@ -136,7 +137,7 @@ class AuthenticationFailure extends StatelessWidget {
                                   child: Styles.regular("+** *** *** 0000",
                                       fontWeight: FontWeight.w600,
                                       fontSize: 14.sp,
-                                      color: textGrayScaleBlueColor)),
+                                      color: pmTheme.text)),
                               Expanded(
                                   child: InkWell(
                                 onTap: () {

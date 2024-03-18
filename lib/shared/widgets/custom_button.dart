@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utils/color.dart';
+import '../utils/themes/theme.dart';
 import '../utils/utils.dart';
 
 class CustomButton extends StatefulWidget {
@@ -55,8 +56,7 @@ class _CustomButtonState extends State<CustomButton> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5.r),
         border: Border.all(
-          color:
-              widget.warningBtn == true ? textErrorRedColor : widget.txtColor!,
+          color: widget.warningBtn == true ? pmTheme.red! : widget.txtColor!,
           width: 0.8,
         ),
         color: widget.isActive == true
