@@ -1,5 +1,7 @@
 class RoutePaths {
   static const String splash = '/';
+  static const String splashTwo = '/splashTwo';
+  static const String splashThree = '/splashThree';
   static const String onboarding = '/onboarding';
   static const String signIn = '/signIn';
   static const String signUp = '/signUp';

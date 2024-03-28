@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:paytex/modules/authentication/sign_up.dart';
+import 'package:paytex/modules/onboarding/splash_two.dart';
+import 'package:paytex/router/route_animation.dart';
 
 import '../modules/authentication/request_failure.dart';
 import '../modules/authentication/sign_in.dart';
 import '../modules/onboarding/splash.dart';
+import '../modules/onboarding/splash_three.dart';
 import 'route_paths.dart';
 
 class MainRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RoutePaths.splash:
-        return MaterialPageRoute(builder: (_) => const SplashScreen());
+        return TransitionalRouteFade(const SplashScreen());
+      case RoutePaths.splashTwo:
+        return TransitionalRouteFade(const SplashScreenTwo());
+      case RoutePaths.splashThree:
+        return TransitionalRouteFade(const SplashScreenThree());
       case RoutePaths.signIn:
         return MaterialPageRoute(builder: (_) => SignInScreen());
+      case RoutePaths.signUp:
+        return MaterialPageRoute(builder: (_) => SignUp());
       case RoutePaths.authFailure:
         return MaterialPageRoute(
           builder: (_) => AuthenticationFailure(

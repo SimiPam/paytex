@@ -119,6 +119,7 @@ class Styles {
     Color? color,
     TextOverflow? overflow,
     TextAlign? align,
+    FontWeight? fontWeight,
     double? height,
     bool strike = false,
     bool underline = false,
@@ -131,7 +132,7 @@ class Styles {
       overflow: overflow,
       style: TextStyle(
         fontSize: fontSize ?? 16.0,
-        fontWeight: FWt.semiBold,
+        fontWeight: fontWeight ?? FWt.semiBold,
         color: color ?? pmTheme.lowerText,
         height: height,
         decoration: underline

@@ -12,6 +12,9 @@ class ImageAssets {
 
 class SvgAssets {
   static const String calendarIcon = "$SVGPATH/calendar.svg";
+  static const String coloredLogo = "$SVGPATH/colored_logo.svg";
+  static const String logo = "$SVGPATH/logo.svg";
+  static const String logoOnly = "$SVGPATH/logo_only.svg";
 }
 
 class LottieAssets {

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+
 import '../../models/theme_model.dart';
 
 const ThemeModel lightThemeMode = ThemeModel(
   id: 'light',
+  primaryColor: Color(0xff3A7FFF),
   black: Color.fromRGBO(44, 44, 44, 1),
-  text: Color.fromRGBO(107, 107, 107, 1),
-  subText: Color.fromRGBO(144, 144, 144, 1),
+  text: Color(0xff1A1A1A),
+  subText: Color(0xff989898),
   lowerText: Color.fromRGBO(181, 181, 181, 1),
   fade: Color.fromRGBO(198, 198, 198, 1),
   deactivateMenu: Color.fromRGBO(219, 219, 219, 1),

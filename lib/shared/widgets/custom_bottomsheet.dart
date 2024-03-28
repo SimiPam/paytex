@@ -57,7 +57,7 @@ showCustomModal(
                   fontSize: 16.sp,
                   fontWeight: FWt.regular,
                   align: TextAlign.center,
-                  color: pmTheme.black),
+                  color: pmTheme.text),
             ),
             HSpace(50.h),
             HSpace(20.h),

@@ -8,18 +8,18 @@ import '../../router/route_paths.dart';
 import '../../shared/utils/assets.dart';
 import '../../shared/utils/utils.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashScreenTwo extends StatefulWidget {
+  const SplashScreenTwo({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashScreenTwo> createState() => _SplashScreenTwoState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenTwoState extends State<SplashScreenTwo> {
   @override
   void initState() {
     super.initState();
-    startTimer(RoutePaths.splashTwo);
+    startTimer(RoutePaths.splashThree);
   }
 
   startTimer(routeName) {
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: pmTheme.primaryColor,
+      backgroundColor: pmTheme.white,
       body: SizedBox(
         height: logicalHeight(),
         width: logicalWidth(),
@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SvgPicture.asset(
-              SvgAssets.logo,
+              SvgAssets.coloredLogo,
               // color: AppColors.primaryColor,
             )
           ],

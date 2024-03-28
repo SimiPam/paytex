@@ -4,6 +4,7 @@ class ThemeModel {
   const ThemeModel({
     this.id,
     this.black,
+    this.primaryColor,
     this.outerBorder,
     this.text,
     this.subText,
@@ -50,6 +51,7 @@ class ThemeModel {
 
   final String? id;
   final Color? black;
+  final Color? primaryColor;
   final Color? text;
   final Color? subText;
   final Color? lowerText;
